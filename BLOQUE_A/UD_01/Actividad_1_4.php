@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 1.1 Bloque A Raúl García</title>
+    <title>Actividad 1.4 Bloque A Raúl García</title>
 </head>
 <body>
     <h1>The Candy Store</h1>
