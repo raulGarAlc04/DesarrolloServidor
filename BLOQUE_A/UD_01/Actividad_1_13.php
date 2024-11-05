@@ -1,11 +1,11 @@
 <?php
-    $username = "Raul";
-    $greeting = "Hola, " . $username . ".";
-    $offer = [
+    $usuario = "Raul";
+    $saludo = "Hola, " . $usuario . ".";
+    $oferta = [
         "item" => "Menú del día",
-        "qty" => 2,
-        "price" => 20,
-        "discount" => 2,
+        "cantidad" => 2,
+        "precio" => 10,
+        "descuento" => 2,
     ];
     $primeros = [
         "Macarrones",
@@ -24,9 +24,9 @@
         "Profiteroles",
         "Fruta variada",
     ];
-    $usual_price = $offer["qty"] * $offer["price"];
-    $offer_price = $offer["qty"] * ($offer["price"] / $offer["discount"]);
-    $saving = $usual_price - $offer_price; 
+    $precio_normal = $oferta["cantidad"] * $oferta["precio"];
+    $precio_oferta = $oferta["cantidad"] * ($oferta["precio"] / $oferta["descuento"]);
+    $ahorro = $precio_normal - $precio_oferta; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@
 </head>
 <body>
     <h1>Restaurante Etcheverry</h1>
-    <p><?= $greeting ?></p>
+    <p><?= $saludo ?></p>
     <h2>Oferta de menu 2x1</h2>
     <h3>Platos incluidos en el menu</h3>
     <h4>Primeros</h4>
@@ -59,7 +59,7 @@
         <li><?= $postres[1] ?></li>
         <li><?= $postres[2] ?></li>
     </ul>
-    <p class = "sticker">Ahorras $<?= $saving ?></p>
-    <p>Pide <?= $offer["qty"] ?> menus <?= $offer["item"] ?> por $<?= $offer_price ?><br>(Precio normal $<?= $usual_price ?>)</p>
+    <p class = "sticker">Ahorras $<?= $ahorro ?></p>
+    <p>Pide <?= $oferta["cantidad"] ?> menus <?= $oferta["item"] ?> por $<?= $precio_oferta ?><br>(Precio normal $<?= $precio_normal ?>)</p>
 </body>
 </html>
