@@ -24,13 +24,13 @@
             <th>AUTHOR</th>
             <th>PAGES</th>
         </tr>
-        <?php foreach ($library->getBooks() as $book): ?>
+        <?php foreach ($library->getBooks() as $book) { ?>
             <tr>
                 <td><?= $book->title ?></td>
                 <td><?= $book->author ?></td>
                 <td><?= $book->pages ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php } ?>
     </table>
 
     <h3>Adding a new book: </h3>
@@ -41,13 +41,13 @@
             <th>AUTHOR</th>
             <th>PAGES</th>
         </tr>
-        <?php foreach ($library->getBooks() as $book): ?>
+        <?php foreach ($library->getBooks() as $book) { ?>
             <tr>
                 <td><?= $book->title ?></td>
                 <td><?= $book->author ?></td>
                 <td><?= $book->pages ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php } ?>
     </table>
 
     <h3>Removing a book: </h3>
@@ -58,13 +58,13 @@
             <th>AUTHOR</th>
             <th>PAGES</th>
         </tr>
-        <?php foreach ($library->getBooks() as $book): ?>
+        <?php foreach ($library->getBooks() as $book) { ?>
             <tr>
                 <td><?= $book->title ?></td>
                 <td><?= $book->author ?></td>
                 <td><?= $book->pages ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php } ?>
     </table>
     <?php include './includes/footer.php'; ?>
 </body>

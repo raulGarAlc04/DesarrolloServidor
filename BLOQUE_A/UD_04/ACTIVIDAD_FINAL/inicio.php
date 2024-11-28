@@ -23,6 +23,7 @@
         </div>
     </header>
 
+    <?php $fleet->addVehicle(new Vehicle('Seat', 'Leon', '1234BBB', true)); ?>
     <main>
         <div class="container">
             <h2>Lista de vehículos</h2>
@@ -36,14 +37,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($fleet->listVehicles() as $vehicle): ?>
+                    <?php foreach ($fleet->listVehicles() as $vehicle) { ?>
                         <tr>
                             <td><?= $vehicle->make ?></td>
                             <td><?= $vehicle->model ?></td>
                             <td><?= $vehicle->licensePlate ?></td>
                             <td><?= $vehicle->available ? 'available' : 'not available' ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php } ?>
                 </tbody>
             </table>
 
@@ -58,14 +59,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($fleet->listAvailableVehicles() as $vehicle): ?>
+                    <?php foreach ($fleet->listAvailableVehicles() as $vehicle) { ?>
                         <tr>
                             <td><?= $vehicle->make ?></td>
                             <td><?= $vehicle->model ?></td>
                             <td><?= $vehicle->licensePlate ?></td>
                             <td><?= $vehicle->available ? 'available' : 'not available' ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
