@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);                                    // Enable strict tpes
-require 'includes/validate.php';                              // Validation functions
+require 'includes/validate.php';
+
+$form = filter_input_array(INPUT_POST);
 
 $user = [
     'email'  => '',
@@ -35,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // If form submitt
 <?php include 'includes/header.php'; ?>
 
 <?= $mensaje ?>
-<form action="11_newsletter.php" method="POST">
+<form action="12_newsletter_filtro.php" method="POST">
   Email: <input type="text" name="email" value="<?= htmlspecialchars($user['email']) ?>">
   <span class="error"><?= $errors['email'] ?></span><br>
   Edad:  <input type="text" name="edad" value="<?= htmlspecialchars($user['edad']) ?>">
@@ -45,5 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // If form submitt
   <span class="error"><?= $errors['terminos'] ?></span><br>
   <input type="submit" value="Save">
 </form>
+<pre><?php var_dump($form); ?></pre>
 
 <?php include 'includes/footer.php'; ?>
