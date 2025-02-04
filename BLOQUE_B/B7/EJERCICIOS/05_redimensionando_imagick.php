@@ -2,7 +2,7 @@
 $moved         = false;
 $message       = '';
 $error         = '';
-$upload_path   = 'uploads/';
+$upload_path   = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR;  // Ruta para la carga de imágenes
 $max_size      = 5242880;
 $allowed_types = ['image/jpeg', 'image/png',];
 $allowed_exts  = ['jpeg', 'png', 'jpg',];
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   if ($moved === true) {
-    $message = '<img src="' . $thumbpath . '">';
+    $message = 'Imagen cargada con éxito:<br><img src="uploads/thumbs/' . $filename . '">';  // Mostrar miniatura
   } else {
     $message = '<b>Error al subir la imagen:</b> ' . $error;
   }
